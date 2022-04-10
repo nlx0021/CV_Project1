@@ -45,7 +45,7 @@ class fc_network():
                 layer.step(lr_schedule, lamb)
             
             # Validation.    
-            if iter % 10000 == 0 or (iter < 10000 and iter % 1000 == 0):
+            if iter % 10000 == 0 or (iter < 10000 and iter % 1000 == 0 and iter != 0):
                 error, loss = self.predict(dataset, 'valid')
                 list(self.layers.values())[0].error.append(error)
                 list(self.layers.values())[0].iter.append(iter)
@@ -139,6 +139,7 @@ class fc_network():
         
         # Visualize for the first layer.
         idx = np.arange(layer_1.out_dim)
+        np.random.seed(21)
         np.random.shuffle(idx)
         idx = idx[:9]
         count = 0 

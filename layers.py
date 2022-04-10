@@ -216,7 +216,7 @@ class softmax_layer():
                 *_):
         self.x = x
         exp_x = np.exp(x)
-        self.output = exp_x / np.sum(exp_x)
+        self.output = exp_x / np.sum(exp_x, axis=0)
         return self.output
     
     def backward(self,

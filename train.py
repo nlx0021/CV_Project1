@@ -62,5 +62,3 @@ if __name__ == '__main__':
         f.truncate()
         f.write(str(best_paras))
         f.write(str(lowest_error))
-    
-    
