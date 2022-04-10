@@ -25,7 +25,7 @@ class MINIST():
             
         with gzip.open(train_label_path, 'rb') as labelpath:
             magic, train_num = struct.unpack('>II', labelpath.read(8))
-            train_labels = np.frombuffer(labelpath.read(), dtype=np.uint8).reshape(-1, 1)
+            train_labels = np.frombuffer(labelpath.read(), dtype=np.uint8).reshape(-1, 1) + 1
             
         idx = np.arange(train_num)
         np.random.shuffle(idx)
@@ -42,7 +42,7 @@ class MINIST():
             
         with gzip.open(test_label_path, 'rb') as labelpath:
             magic, test_num = struct.unpack('>II', labelpath.read(8))
-            test_labels = np.frombuffer(labelpath.read(), dtype=np.uint8).reshape(-1, 1)
+            test_labels = np.frombuffer(labelpath.read(), dtype=np.uint8).reshape(-1, 1) + 1
             
         self.test_set = {'fig': test_images, 'label': test_labels, 'num': test_num}
         
