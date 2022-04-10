@@ -14,6 +14,8 @@ The first project of cv.
   
 ```python train_one_model.py --model_name My_model --lr 0.0001 --max_iter 100000 --lamb 0.001 --neural_num 100```
   
+（lr为学习率，max_iter为最大迭代数，lamb为正则化惩罚系数，neural_num为中间层的神经元个数)
+  
 模型将被保存在model文件夹中。注意，若您在传入参数时模型名字为"xxxx"，那么最终模型保存的名字为"xxxx_net.pkl"，即会有额外的后缀。
 ## test——测试自己的模型
 请运行test.py文件并传入模型的名字。例如：
