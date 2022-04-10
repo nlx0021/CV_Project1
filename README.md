@@ -31,4 +31,5 @@ The first project of cv.
 模型的loss曲线，精度曲线以及各层参数的可视化将被显示。注意模型名字的传入（同上）。
 
 ## Pretrained model
-我们训练好的模型在————————中可以下载。下载后，请将其保存到model文件夹下。
+我们训练好的模型在百度网盘中可以下载，下载链接为https://pan.baidu.com/s/1cCY407C6MDXRgseO7j48zw?pwd=kqrh 。下载后，请将其保存到model文件夹下。
+  
