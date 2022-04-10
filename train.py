@@ -12,7 +12,7 @@ if __name__ == '__main__':
     # Search for the hyperparameters.
     lr_set = [2e-3, 1e-3, 5e-4]
     lamb_set = [.01, .001]
-    neural_num_set = [100, 200, 300]
+    neural_num_set = [50, 100, 300]
     
     lowest_error = 1.0
     best_paras = None
